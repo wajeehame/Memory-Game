@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Part B: Memory Game</title>
+        <style>
+            body{
+                text-align: center;
+                background-color: rgb(182, 182, 182);
+            }
+            #gameContainer{
+                display: grid;
+                grid-template-columns: repeat(4, 100px);
+                gap:10px;
+                justify-content: center;
+                margin-top: 10px;
+            }
+            button{
+                padding:10px;
+                background-color:rgb(79, 142, 152);
+                cursor: pointer;
+                margin-top: 10px;
+            }
+            button:hover{
+                background-color:rgb(109, 182, 194)
+            }
+            .card{
+                width:100px;
+                height:100px;
+                background-color:rgb(219, 212, 212);
+                background-size: cover;
+                background-repeat: no-repeat;
+                cursor: pointer;
+            }
+            #winMessage{
+                color:rgb(54, 92, 54);
+                margin-top: 25px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            #timer {
+                font-size: 18px;
+                margin-top: 10px;
+                color: #cf4545;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Memory Game</h1>
+        <p>Rules: Match the pictures before the timer ends.</p>
+        <legend for="difficulty">Choose difficulty:</legend>
+        <input type="radio" id="easy" name="difficulty">Easy</input>
+        <input type="radio" id="medium" name="difficulty">Medium</input>
+        <input type="radio" id="hard" name="difficulty">Hard</input>
+        <br>
+        <!--<button id="startButton">Start Game</button>-->
+        <button type="button" onclick="getDifficulty()"> Start </button>
+        <!--<button id="start">Start</button>-->
+        <div id="gameContainer"></div>
+        <div id="winMessage"></div>
+        <div id="timer">Time: <span id="timeLeft"></span></div>
+        <script src="b.js"></script>
+        <br><br>
+    </body>
+
+</html>
